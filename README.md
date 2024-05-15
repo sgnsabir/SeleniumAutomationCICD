@@ -1,0 +1,1 @@
+This is one of the portfolio project, This Selenium framework project Developed from scratch using page object model with page factory, TestNG, Maven, also touched cucumber on high level,  for CI/CD using Jenkins.
