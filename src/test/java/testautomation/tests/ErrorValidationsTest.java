@@ -29,4 +29,15 @@ public class ErrorValidationsTest extends BaseTest {
 		Assert.assertFalse(match);
 	}
 
+	@Test
+	public void ProductErrorValidation2() {
+
+		String PRODUCT_NAME = "IPHONE 13 PRO";
+		ProductCatalogue productCatalogue = landingPage.loginApplication("sabirmostafa@gmail.com", "Work@143");
+		CartPage cartPage = productCatalogue.addProductToCart(PRODUCT_NAME);
+		productCatalogue.goToCartPage();
+		Boolean match = cartPage.verifyProducrDisplayed("IPHONE 14 PRO");
+		Assert.assertFalse(match);
+	}
+
 }
