@@ -11,11 +11,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class practice {
 
+	@Test
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String PRODUCT_NAME = "ZARA COAT 3";
@@ -72,7 +74,6 @@ public class practice {
 		Assert.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
 
 		driver.close();
-
 	}
 
 }
