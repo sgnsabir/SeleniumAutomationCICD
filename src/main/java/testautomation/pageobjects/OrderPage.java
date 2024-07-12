@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import testautomation.AbstractComponents.AbstractComponent;
 
 public class OrderPage extends AbstractComponent {
-	WebDriver driver;
+	private WebDriver driver;
 
 	public OrderPage(WebDriver driver) {
 		super(driver);
@@ -19,9 +19,8 @@ public class OrderPage extends AbstractComponent {
 		PageFactory.initElements(driver, this);
 	}
 
-	// pageFactory
 	@FindBy(css = "tr td:nth-child(3)")
-	List<WebElement> orderedProductNames;
+	private List<WebElement> orderedProductNames;
 
 	public Boolean VerifyOrderDisplay(String productName) {
 		Boolean match = orderedProductNames.stream()

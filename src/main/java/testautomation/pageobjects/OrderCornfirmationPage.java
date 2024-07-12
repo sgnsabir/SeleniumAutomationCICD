@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import testautomation.AbstractComponents.AbstractComponent;
 
 public class OrderCornfirmationPage extends AbstractComponent {
-	WebDriver driver;
+	private WebDriver driver;
 
 	public OrderCornfirmationPage(WebDriver driver) {
 		super(driver);
@@ -16,14 +16,12 @@ public class OrderCornfirmationPage extends AbstractComponent {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	// driver.findElement(By.cssSelector(".hero-primary"))
-	// pageFactory
 
 	@FindBy(css = ".hero-primary")
-	WebElement confirmationMessage;
+	private WebElement confirmationMessage;
 
 	@FindBy(css = "label[routerlink='/dashboard/myorders']")
-	WebElement orderHistoryLink;
+	private WebElement orderHistoryLink;
 
 	public String confirmMessage() {
 		waitForWebElementToAppear(confirmationMessage);

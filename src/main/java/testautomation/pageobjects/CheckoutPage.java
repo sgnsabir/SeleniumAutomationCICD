@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import testautomation.AbstractComponents.AbstractComponent;
 
 public class CheckoutPage extends AbstractComponent {
-	WebDriver driver;
+	private WebDriver driver;
 
 	public CheckoutPage(WebDriver driver) {
 		super(driver);
@@ -18,34 +18,15 @@ public class CheckoutPage extends AbstractComponent {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	/*
-	 * For future reference
-	 * driver.findElement(By.cssSelector("[placeholder='Select Country']")
-	 * driver.findElement(By.cssSelector(".totalRow button")).click();
-	 * driver.findElement(By.xpath("//button[contains(@class,'ta-item')][2]")).click
-	 * (); driver.findElement(By.cssSelector(".action__submit")).click(); //Edit
-	 * personal information
-	 * driver.findElement(By.xpath("//input[contains(@value,'4542')]")).clear();
-	 * driver.findElement(By.xpath("//input[contains(@value,'4542')]")).
-	 * sendKeys("4242 4242 4242 4242");
-	 * driver.findElement(By.xpath("//select[@class='input ddl'][1]")).click();
-	 * driver.findElement(By.xpath("//select/option[5]")).click();
-	 * driver.findElement(By.xpath("//select[@class='input ddl'][2]")).click();
-	 * driver.findElement(By.xpath("//select/option[20]")).click();
-	 * driver.findElement(By.xpath("(//input[@type='text'])[2]")).sendKeys("195");
-	 * driver.findElement(By.xpath("(//input[@type='text'])[3]")).sendKeys("SABIR");
-	 * driver.findElement(By.xpath("(//input[@type='text'])[4]")).sendKeys("FREE");
-	 */
-	// pageFactory
 
 	@FindBy(css = "[placeholder='Select Country']")
-	WebElement selectCountryField;
+	private WebElement selectCountryField;
 
 	@FindBy(xpath = "//button[contains(@class,'ta-item')][2]")
-	WebElement selectCountry;
+	private WebElement selectCountry;
 
 	@FindBy(css = ".action__submit")
-	WebElement orderSubmit;
+	private WebElement orderSubmit;
 
 	By countryList = By.cssSelector(".ta-item");
 

@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import testautomation.AbstractComponents.AbstractComponent;
 
 public class ProductCatalogue extends AbstractComponent {
-	WebDriver driver;
+	private WebDriver driver;
 
 	public ProductCatalogue(WebDriver driver) {
 		super(driver);
@@ -19,19 +19,15 @@ public class ProductCatalogue extends AbstractComponent {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
-	// List<WebElement> products = driver.findElements(By.cssSelector(".mb-3"));
-	// addToCart = prod.findElement(By.cssSelector("button.btn.w-10")).click();
-	// driver.findElement(By.cssSelector(".ng-animating")))
-	// PageFactory
+	
 	@FindBy(css = ".mb-3")
-	List<WebElement> products;
+	private List<WebElement> products;
 
 	@FindBy(css = ".ng-animating")
-	WebElement spinner;
+	private WebElement spinner;
 
 	@FindBy(css = "[routerlink*='cart']")
-	WebElement myCart;
+	private WebElement myCart;
 
 	By productsBy = By.cssSelector(".mb-3");
 	By addToCart = By.cssSelector("button.btn.w-10");

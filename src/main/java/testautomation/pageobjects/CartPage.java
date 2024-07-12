@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import testautomation.AbstractComponents.AbstractComponent;
 
 public class CartPage extends AbstractComponent {
-	WebDriver driver;
+	private WebDriver driver;
 
 	public CartPage(WebDriver driver) {
 		super(driver);
@@ -19,16 +19,12 @@ public class CartPage extends AbstractComponent {
 		PageFactory.initElements(driver, this);
 	}
 
-	// List<WebElement> cartProducts = driver.findElements(By.cssSelector(".cart
-	// h3"));
-	// driver.findElement(By.cssSelector(".totalRow button")).click();
-	// pageFactory
 	@FindBy(css = ".cart h3")
-	List<WebElement> cartProducts;
+	private List<WebElement> cartProducts;
 
 	@FindBy(css = ".totalRow button")
-	WebElement checkoutEle;
-
+	private WebElement checkoutEle;
+	
 	public Boolean verifyProducrDisplayed(String productName) {
 		Boolean match = cartProducts.stream()
 				.anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(productName));

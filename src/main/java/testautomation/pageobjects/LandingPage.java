@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import testautomation.AbstractComponents.AbstractComponent;
 
 public class LandingPage extends AbstractComponent {
-	WebDriver driver;
+	private WebDriver driver;
 
 	public LandingPage(WebDriver driver) {
 		super(driver);
@@ -16,21 +16,19 @@ public class LandingPage extends AbstractComponent {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	// WebElement userEmail = driver.findElement(By.id("userEmail"));
 
-	// PageFactory
 	@FindBy(id = "userEmail")
-	WebElement userEmail;
+	private WebElement userEmail;
 
 	@FindBy(id = "userPassword")
-	WebElement userPassword;
+	private WebElement userPassword;
 
 	@FindBy(id = "login")
-	WebElement submit;
+	private WebElement submit;
 
 	@FindBy(css = "[class*='flyInOut']")
-	WebElement errorMessage;
-
+	private WebElement errorMessage;
+	
 	public void goTo() {
 		driver.get("https://rahulshettyacademy.com/client/");
 	}
