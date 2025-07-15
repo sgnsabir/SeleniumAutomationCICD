@@ -4,15 +4,16 @@
   <listeners>
     <listener class-name="testautomation.TestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Error Validations Test(failed)" verbose="0">
+  <test thread-count="5" parallel="tests" name="Submit Order Test(failed)" verbose="0">
     <classes>
-      <class name="testautomation.tests.ErrorValidationsTest">
+      <class name="testautomation.tests.SubmitOrderTest">
         <methods>
-          <include name="loginErrorValidation"/>
+          <include name="submitOrder" invocation-numbers="0"/>
           <include name="tearDown"/>
+          <include name="orderHistoryTest"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- testautomation.tests.ErrorValidationsTest -->
+      </class> <!-- testautomation.tests.SubmitOrderTest -->
     </classes>
-  </test> <!-- Error Validations Test(failed) -->
+  </test> <!-- Submit Order Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

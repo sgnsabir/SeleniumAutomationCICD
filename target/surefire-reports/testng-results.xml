@@ -1,124 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="4" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-14T05:24:04 CEST" name="Suite" finished-at="2024-05-14T05:24:52 CEST" duration-ms="47959">
+  <suite started-at="2025-07-10T13:21:02 CEST" name="Suite" finished-at="2025-07-10T13:21:41 CEST" duration-ms="38474">
     <groups>
       <group name="ErrorHandling">
-        <method signature="ErrorValidationsTest.loginErrorValidation()[pri:0, instance:testautomation.tests.ErrorValidationsTest@1b66c0fb]" name="loginErrorValidation" class="testautomation.tests.ErrorValidationsTest"/>
+        <method signature="ErrorValidationsTest.loginErrorValidation()[pri:0, instance:testautomation.tests.ErrorValidationsTest@2254127a]" name="loginErrorValidation" class="testautomation.tests.ErrorValidationsTest"/>
       </group> <!-- ErrorHandling -->
       <group name="Purchase">
-        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:testautomation.tests.SubmitOrderTest@66982506]" name="submitOrder" class="testautomation.tests.SubmitOrderTest"/>
-        <method signature="SubmitOrderTest.orderHistoryTest(java.util.HashMap)[pri:0, instance:testautomation.tests.SubmitOrderTest@66982506]" name="orderHistoryTest" class="testautomation.tests.SubmitOrderTest"/>
+        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:testautomation.tests.SubmitOrderTest@25be7b63]" name="submitOrder" class="testautomation.tests.SubmitOrderTest"/>
+        <method signature="SubmitOrderTest.orderHistoryTest(java.util.HashMap)[pri:0, instance:testautomation.tests.SubmitOrderTest@25be7b63]" name="orderHistoryTest" class="testautomation.tests.SubmitOrderTest"/>
       </group> <!-- Purchase -->
     </groups>
-    <test started-at="2024-05-14T05:24:04 CEST" name="Error Validations Test" finished-at="2024-05-14T05:24:33 CEST" duration-ms="29086">
-      <class name="testautomation.tests.ErrorValidationsTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testautomation.tests.ErrorValidationsTest@1b66c0fb]" started-at="2024-05-14T05:24:04 CEST" name="launchApplication" finished-at="2024-05-14T05:24:12 CEST" duration-ms="8533" status="PASS">
+    <test started-at="2025-07-10T13:21:02 CEST" name="Submit Order Test" finished-at="2025-07-10T13:21:35 CEST" duration-ms="32675">
+      <class name="testautomation.tests.SubmitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testautomation.tests.SubmitOrderTest@25be7b63]" started-at="2025-07-10T13:21:02 CEST" name="launchApplication" finished-at="2025-07-10T13:21:06 CEST" duration-ms="3507" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="ProductErrorValidation()[pri:0, instance:testautomation.tests.ErrorValidationsTest@1b66c0fb]" started-at="2024-05-14T05:24:12 CEST" name="ProductErrorValidation" finished-at="2024-05-14T05:24:27 CEST" duration-ms="14875" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:testautomation.tests.SubmitOrderTest@25be7b63]" started-at="2025-07-10T13:21:06 CEST" name="submitOrder" data-provider="getData" finished-at="2025-07-10T13:21:16 CEST" duration-ms="10239" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Iamking@000, product=ZARA COAT 3, email=anshika@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of all elements located by By.cssSelector: .mb-3 (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.100, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: C:\Users\sgnsa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50960}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50960/devtoo..., se:cdpVersion: 138.0.7204.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 32d785b1e83e0e13955ec2a7ab0f4427]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.cssSelector: .mb-3 (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.100, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: C:\Users\sgnsa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50960}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50960/devtoo..., se:cdpVersion: 138.0.7204.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 32d785b1e83e0e13955ec2a7ab0f4427
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at testautomation.AbstractComponents.AbstractComponent.waitForElementToAppear(AbstractComponent.java:34)
+at testautomation.pageobjects.ProductCatalogue.getProductList(ProductCatalogue.java:37)
+at testautomation.pageobjects.ProductCatalogue.getProductByName(ProductCatalogue.java:42)
+at testautomation.pageobjects.ProductCatalogue.addProductToCart(ProductCatalogue.java:50)
+at testautomation.tests.SubmitOrderTest.submitOrder(SubmitOrderTest.java:23)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ProductErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testautomation.tests.ErrorValidationsTest@1b66c0fb]" started-at="2024-05-14T05:24:27 CEST" name="tearDown" finished-at="2024-05-14T05:24:27 CEST" duration-ms="133" status="PASS">
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testautomation.tests.SubmitOrderTest@25be7b63]" started-at="2025-07-10T13:21:17 CEST" name="tearDown" finished-at="2025-07-10T13:21:17 CEST" duration-ms="111" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testautomation.tests.ErrorValidationsTest@1b66c0fb]" started-at="2024-05-14T05:24:27 CEST" name="launchApplication" finished-at="2024-05-14T05:24:32 CEST" duration-ms="4832" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testautomation.tests.SubmitOrderTest@25be7b63]" started-at="2025-07-10T13:21:17 CEST" name="launchApplication" finished-at="2025-07-10T13:21:20 CEST" duration-ms="2910" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="loginErrorValidation()[pri:0, instance:testautomation.tests.ErrorValidationsTest@1b66c0fb]" started-at="2024-05-14T05:24:32 CEST" name="loginErrorValidation" finished-at="2024-05-14T05:24:33 CEST" duration-ms="521" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:testautomation.tests.SubmitOrderTest@25be7b63]" started-at="2025-07-10T13:21:20 CEST" name="submitOrder" data-provider="getData" finished-at="2025-07-10T13:21:35 CEST" duration-ms="15063" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Test1234, product=ADIDAS ORIGINAL, email=sgnsabir@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testautomation.tests.SubmitOrderTest@25be7b63]" started-at="2025-07-10T13:21:35 CEST" name="tearDown" finished-at="2025-07-10T13:21:35 CEST" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:testautomation.tests.SubmitOrderTest@25be7b63]" started-at="2025-07-10T13:21:35 CEST" name="orderHistoryTest" finished-at="2025-07-10T13:21:35 CEST" depends-on-methods="testautomation.tests.SubmitOrderTest.submitOrder" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method testautomation.tests.SubmitOrderTest.orderHistoryTest() on instance testautomation.tests.SubmitOrderTest@25be7b63 depends on not successfully finished methods 
+[testautomation.tests.SubmitOrderTest.submitOrder() on instance testautomation.tests.SubmitOrderTest@25be7b63]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method testautomation.tests.SubmitOrderTest.orderHistoryTest() on instance testautomation.tests.SubmitOrderTest@25be7b63 depends on not successfully finished methods 
+[testautomation.tests.SubmitOrderTest.submitOrder() on instance testautomation.tests.SubmitOrderTest@25be7b63]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistoryTest -->
+      </class> <!-- testautomation.tests.SubmitOrderTest -->
+    </test> <!-- Submit Order Test -->
+    <test started-at="2025-07-10T13:21:02 CEST" name="Error Validations Test" finished-at="2025-07-10T13:21:41 CEST" duration-ms="38474">
+      <class name="testautomation.tests.ErrorValidationsTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testautomation.tests.ErrorValidationsTest@2254127a]" started-at="2025-07-10T13:21:02 CEST" name="launchApplication" finished-at="2025-07-10T13:21:06 CEST" duration-ms="3542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="ProductErrorValidation()[pri:0, instance:testautomation.tests.ErrorValidationsTest@2254127a]" started-at="2025-07-10T13:21:06 CEST" name="ProductErrorValidation" finished-at="2025-07-10T13:21:20 CEST" duration-ms="14287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProductErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testautomation.tests.ErrorValidationsTest@2254127a]" started-at="2025-07-10T13:21:20 CEST" name="tearDown" finished-at="2025-07-10T13:21:20 CEST" duration-ms="74" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testautomation.tests.ErrorValidationsTest@2254127a]" started-at="2025-07-10T13:21:20 CEST" name="launchApplication" finished-at="2025-07-10T13:21:23 CEST" duration-ms="2912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="ProductErrorValidation2()[pri:0, instance:testautomation.tests.ErrorValidationsTest@2254127a]" started-at="2025-07-10T13:21:23 CEST" name="ProductErrorValidation2" finished-at="2025-07-10T13:21:37 CEST" duration-ms="14242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProductErrorValidation2 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testautomation.tests.ErrorValidationsTest@2254127a]" started-at="2025-07-10T13:21:37 CEST" name="tearDown" finished-at="2025-07-10T13:21:37 CEST" duration-ms="86" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testautomation.tests.ErrorValidationsTest@2254127a]" started-at="2025-07-10T13:21:37 CEST" name="launchApplication" finished-at="2025-07-10T13:21:40 CEST" duration-ms="2857" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="loginErrorValidation()[pri:0, instance:testautomation.tests.ErrorValidationsTest@2254127a]" started-at="2025-07-10T13:21:40 CEST" name="loginErrorValidation" finished-at="2025-07-10T13:21:41 CEST" duration-ms="391" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testautomation.tests.ErrorValidationsTest@1b66c0fb]" started-at="2024-05-14T05:24:33 CEST" name="tearDown" finished-at="2024-05-14T05:24:33 CEST" duration-ms="138" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testautomation.tests.ErrorValidationsTest@2254127a]" started-at="2025-07-10T13:21:41 CEST" name="tearDown" finished-at="2025-07-10T13:21:41 CEST" duration-ms="56" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testautomation.tests.ErrorValidationsTest -->
     </test> <!-- Error Validations Test -->
-    <test started-at="2024-05-14T05:24:04 CEST" name="Submit Order Test" finished-at="2024-05-14T05:24:52 CEST" duration-ms="47959">
-      <class name="testautomation.tests.SubmitOrderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testautomation.tests.SubmitOrderTest@66982506]" started-at="2024-05-14T05:24:04 CEST" name="launchApplication" finished-at="2024-05-14T05:24:12 CEST" duration-ms="8398" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:testautomation.tests.SubmitOrderTest@66982506]" started-at="2024-05-14T05:24:12 CEST" name="submitOrder" data-provider="getData" finished-at="2024-05-14T05:24:29 CEST" duration-ms="17069" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Iamking@000, product=ZARA COAT 3, email=anshika@gmail.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testautomation.tests.SubmitOrderTest@66982506]" started-at="2024-05-14T05:24:29 CEST" name="tearDown" finished-at="2024-05-14T05:24:29 CEST" duration-ms="88" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testautomation.tests.SubmitOrderTest@66982506]" started-at="2024-05-14T05:24:29 CEST" name="launchApplication" finished-at="2024-05-14T05:24:34 CEST" duration-ms="5021" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:testautomation.tests.SubmitOrderTest@66982506]" started-at="2024-05-14T05:24:34 CEST" name="submitOrder" data-provider="getData" finished-at="2024-05-14T05:24:39 CEST" duration-ms="4465" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Test1234, product=ADIDAS ORIGINAL, email=sgnsabir@gmail.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testautomation.tests.SubmitOrderTest@66982506]" started-at="2024-05-14T05:24:39 CEST" name="tearDown" finished-at="2024-05-14T05:24:39 CEST" duration-ms="166" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testautomation.tests.SubmitOrderTest@66982506]" started-at="2024-05-14T05:24:39 CEST" name="launchApplication" finished-at="2024-05-14T05:24:44 CEST" duration-ms="5168" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:testautomation.tests.SubmitOrderTest@66982506]" started-at="2024-05-14T05:24:44 CEST" name="orderHistoryTest" data-provider="getData" finished-at="2024-05-14T05:24:45 CEST" depends-on-methods="testautomation.tests.SubmitOrderTest.submitOrder" duration-ms="882" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Iamking@000, product=ZARA COAT 3, email=anshika@gmail.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- orderHistoryTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testautomation.tests.SubmitOrderTest@66982506]" started-at="2024-05-14T05:24:45 CEST" name="tearDown" finished-at="2024-05-14T05:24:45 CEST" duration-ms="63" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:testautomation.tests.SubmitOrderTest@66982506]" started-at="2024-05-14T05:24:45 CEST" name="launchApplication" finished-at="2024-05-14T05:24:50 CEST" duration-ms="5243" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:testautomation.tests.SubmitOrderTest@66982506]" started-at="2024-05-14T05:24:50 CEST" name="orderHistoryTest" data-provider="getData" finished-at="2024-05-14T05:24:51 CEST" depends-on-methods="testautomation.tests.SubmitOrderTest.submitOrder" duration-ms="1094" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Test1234, product=ADIDAS ORIGINAL, email=sgnsabir@gmail.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- orderHistoryTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testautomation.tests.SubmitOrderTest@66982506]" started-at="2024-05-14T05:24:51 CEST" name="tearDown" finished-at="2024-05-14T05:24:52 CEST" duration-ms="128" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testautomation.tests.SubmitOrderTest -->
-    </test> <!-- Submit Order Test -->
   </suite> <!-- Suite -->
 </testng-results>

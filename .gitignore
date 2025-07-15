@@ -1,1 +1,71 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Maven build directory
 /target/
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.iws
+out/
+
+# VS Code
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+
+# Selenium-specific (if WebDriver executables or test reports are stored)
+/test-output/
+*.swp
+*.swo
+
+# ChromeDriver / GeckoDriver binaries (if checked into project)
+chromedriver
+chromedriver.exe
+geckodriver
+geckodriver.exe
+
+# Reports (if generated)
+/reports/
+allure-results/
+allure-report/
+
+# Coverage reports
+coverage/
+*.lcov
+jacoco.exec
+jacoco-report/
+
+# Temporary files
+*.tmp
+*.bak
+*.old
+
+# IntelliJ build output
+/out/
